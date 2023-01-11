@@ -1,0 +1,138 @@
+{
+  "binsScanned": 7,
+  "onOrderStatus": true,
+  "rackNo": "SCM-011-012",
+  "roomNo": "F-01-023",
+  "lastScan": "01/05/2023 - 10:48 AM",
+  "imgUrl": "https://static.connect2india.com/c2icd/product_resources/images/bin-storage-rack.jpg",
+  "onOrders": [
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    }
+  ],
+  "backOrdered": [
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    },
+    {
+      "itemName": "Curette Surg 2mm Loop Top",
+      "modelNo": "M12553689",
+      "time": "10:48 am",
+      "date": "01/05/2033",
+      "qty": "50"
+    }
+  ]
+}
