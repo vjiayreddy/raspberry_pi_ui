@@ -1,0 +1,11 @@
+{
+  "data": {
+    "binsScanned": 17,
+    "lastScanDateTime": "14/01/2023 - 04:38 AM",
+    "rackNo": "SCM-011-0",
+    "roomNo": "F-01-023",
+    "scanStatus": "COMPLETED"
+  },
+  "error": false,
+  "message": "Scan Status Found"
+}

@@ -50,19 +50,21 @@ const StyledBinCountInfo = styled(Typography)(({ theme }) => ({
   fontWeight: 800,
 }));
 
-const SectionOne = ({ data }) => {
+const SectionOne = ({ data, timerCount }) => {
   const [progress, setProgress] = React.useState(0);
+  const [label, setLabel] = React.useState("Refreshing...");
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
+        setLabel("Refreshing...");
         if (oldProgress === 100) {
           return 0;
         }
-        const diff = Math.random() * 10;
+        const diff = Math.random() * 100;
         return Math.min(oldProgress + diff, 100);
       });
-    }, 500);
+    }, timerCount);
 
     return () => {
       clearInterval(timer);
@@ -79,7 +81,7 @@ const SectionOne = ({ data }) => {
         </StyledBoxHeader>
         <StyledBoxScanning>
           <Typography align="center" variant="h6">
-            Scanning....
+            {label}
           </Typography>
           <Box pt={1} sx={{ width: "50%" }}>
             <LinearProgress
@@ -96,48 +98,48 @@ const SectionOne = ({ data }) => {
               borderRight: `1px solid ${theme.palette.divider}`,
             })}
           >
-            {data && (
-              <>
-                <StyledBinCountInfo variant="h3">
-                  {data.binsScanned}
-                </StyledBinCountInfo>
-                <Typography variant="subtitle1">BIN'S SCANNED</Typography>
-              </>
-            )}
+            <>
+              <StyledBinCountInfo variant="h3">
+                {data?.binsScanned ? data?.binsScanned : 0}
+              </StyledBinCountInfo>
+              <Typography variant="subtitle1">BIN'S SCANNED</Typography>
+            </>
           </StyledBinContent>
           <StyledBinContent>
-            {data && (
-              <>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <Typography gutterBottom variant="subtitle1">
-                    ON ORDER STATUS
-                  </Typography>
+            <>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Typography gutterBottom variant="subtitle1">
+                  ON ORDER STATUS
+                </Typography>
 
-                  <Chip
-                    size="small"
-                    label={data.onOrderStatus ? "success" : "Failed"}
-                    color={data.onOrderStatus ? "success" : "error"}
-                  />
-                </Box>
-                <Box
-                  mt={2}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <Typography variant="subtitle1">LAST SCAN</Typography>
-                  <Typography variant="caption">{data.lastScan}</Typography>
-                </Box>
-              </>
-            )}
+                <Chip
+                  size="small"
+                  label={
+                    data?.scanStatus === "COMPLETED" ? "success" : "Failed"
+                  }
+                  color={data?.scanStatus === "COMPLETED" ? "success" : "error"}
+                />
+              </Box>
+              <Box
+                mt={2}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="subtitle1">LAST SCAN</Typography>
+                <Typography variant="caption">
+                  {data?.lastScan ? data?.lastScan : "-"}
+                </Typography>
+              </Box>
+            </>
           </StyledBinContent>
         </StyledBoxContent>
       </StyledBoxMain>

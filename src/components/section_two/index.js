@@ -2,7 +2,6 @@ import React from "react";
 import { Grid, Typography, Box, styled } from "@mui/material";
 import logo from "../../../src/logo.jpeg";
 
-
 const StyledBoxMain = styled(Box)(({ theme }) => ({
   height: "50vh",
   display: "flex",
@@ -32,26 +31,31 @@ const SectionOne = ({ data }) => {
     <Grid item xs={6}>
       <StyledBoxMain>
         <StyledBoxHeader>
-          {data && (
-            <>
+          <>
             <Box>
               <Typography>
-                RACK NO - <b>{data.rackNo}</b>
+                RACK NO -{" "}
+                <b>
+                  {data?.scanStatus?.rackNo ? data?.scanStatus?.rackNo : "-"}
+                </b>
               </Typography>
               <Typography>
-                ROOM NO - <b>{data.roomNo}</b>
+                ROOM NO -{" "}
+                <b>
+                  {data?.scanStatus?.roomNo ? data?.scanStatus?.roomNo : "-"}
+                </b>
               </Typography>
             </Box>
             <Box>
-              <img width={80} src={logo}/>
+              <img width={80} src={logo} />
             </Box>
-            </>
-            
-          )}
+          </>
         </StyledBoxHeader>
         <StyledBoxContent
           sx={{
-            backgroundImage: `url(${data?.imgUrl})`,
+            backgroundImage: data?.detectImage?.image
+              ? `url(${data?.detectImage?.image})`
+              : `url(https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg)`,
           }}
         ></StyledBoxContent>
       </StyledBoxMain>

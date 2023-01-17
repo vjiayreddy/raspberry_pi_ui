@@ -31,8 +31,8 @@ const StyledNoDataIndication = styled("div")(({ theme }) => ({
   position: "absolute",
   top: "40%",
   left: "40%",
-  color:'gainsboro',
-  fontWeight:500
+  color: "gainsboro",
+  fontWeight: 500,
 }));
 
 const SectionThree = ({ data }) => {
@@ -41,7 +41,7 @@ const SectionThree = ({ data }) => {
       <StyledBoxMain>
         <StyledBoxHeader>BACK ORDERED</StyledBoxHeader>
         <StyledDataContent>
-          {data.length > 0 ? (
+          {data?.length > 0 ? (
             <table style={{ width: "100%" }}>
               <thead>
                 <tr className="liteGray">
@@ -55,10 +55,10 @@ const SectionThree = ({ data }) => {
                 {data.map((item, index) => (
                   <tr key={index}>
                     <td>{item.itemName}</td>
-                    <td>{item.modelNo}</td>
+                    <td>{item.model}</td>
                     <td>{item.qty}</td>
                     <td>
-                      {item.time} - {item.date}
+                      {item.datetime} - {item.date}
                     </td>
                   </tr>
                 ))}

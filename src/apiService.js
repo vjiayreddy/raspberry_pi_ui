@@ -1,14 +1,13 @@
 export const getApiData = (urlPath) => {
-  let apiData = null;
+  let _data = null;
   fetch(urlPath)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      apiData = data;
+      data = _data;
     })
     .catch((error) => {
-      apiData = null;
+      _data = null;
     });
 
-  return apiData;
+  return _data;  
 };

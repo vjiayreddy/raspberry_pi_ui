@@ -41,7 +41,7 @@ const SectionThree = ({ data }) => {
       <StyledBoxMain>
         <StyledBoxHeader>ON ORDERS</StyledBoxHeader>
         <StyledDataContent>
-          {data.length > 0 ? (
+          {data?.length > 0 ? (
             <table style={{ width: "100%" }}>
               <thead>
                 <tr className="liteGray">
@@ -55,10 +55,10 @@ const SectionThree = ({ data }) => {
                 {data.map((item, index) => (
                   <tr key={index}>
                     <td>{item.itemName}</td>
-                    <td>{item.modelNo}</td>
+                    <td>{item.model}</td>
                     <td>{item.qty}</td>
                     <td>
-                      {item.time} - {item.date}
+                      {item.datetime} - {item.date}
                     </td>
                   </tr>
                 ))}
