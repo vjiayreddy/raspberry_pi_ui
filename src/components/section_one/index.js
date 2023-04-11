@@ -52,12 +52,12 @@ const StyledBinCountInfo = styled(Typography)(({ theme }) => ({
 
 const SectionOne = ({ data, timerCount }) => {
   const [progress, setProgress] = React.useState(0);
-  const [label, setLabel] = React.useState("Refreshing...");
+  const [label, setLabel] = React.useState("Read to scan bins...");
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
-        setLabel("Refreshing...");
+        setLabel("Read to scan bins...");
         if (oldProgress === 100) {
           return 0;
         }

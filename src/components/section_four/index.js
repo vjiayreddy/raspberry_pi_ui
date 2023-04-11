@@ -39,7 +39,7 @@ const SectionThree = ({ data }) => {
   return (
     <Grid item xs={6}>
       <StyledBoxMain>
-        <StyledBoxHeader>BACK ORDERED</StyledBoxHeader>
+        <StyledBoxHeader>FULL SCAN</StyledBoxHeader>
         <StyledDataContent>
           {data?.length > 0 ? (
             <table style={{ width: "100%" }}>
