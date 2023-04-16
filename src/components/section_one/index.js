@@ -136,7 +136,7 @@ const SectionOne = ({ data, timerCount }) => {
               >
                 <Typography variant="subtitle1">LAST SCAN</Typography>
                 <Typography variant="caption">
-                  {data?.lastScan ? data?.lastScan : "-"}
+                  {data?.lastScanDateTime ? data?.lastScanDateTime : "-"}
                 </Typography>
               </Box>
             </>

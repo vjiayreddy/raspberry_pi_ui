@@ -25,14 +25,16 @@ const getApiData = (url, state) => {
 const App = () => {
   const [scanStatus, setScanStatus] = useState(null);
   const [orders, setOrders] = useState([]);
-  const [backOrders, setBackOrders] = useState([]);
+  const [fullScan, setFullScanDetails] = useState([]);
   const [detectImage, setDetectedImage] = useState(null);
-
+  const host = "http://localhost:8081/"
+  const selfHost = ""
+  const usedHost = selfHost
   useInterval(() => {
-    getApiData("scan_scan.json", setScanStatus);
-    getApiData("get_orders.json", setOrders);
-    getApiData("get_back_orders.json", setBackOrders);
-    getApiData("get_detected_image.json", setDetectedImage);
+    getApiData(`${usedHost}/getScanStatus`, setScanStatus);
+    getApiData(`${usedHost}/getOrdered`, setOrders);
+    getApiData(`${usedHost}/getFullScanDetails`, setFullScanDetails);
+    getApiData(`${usedHost}/getLatestDetectedImage`, setDetectedImage);
   }, 5000);
 
   return (
@@ -40,7 +42,7 @@ const App = () => {
       <SectionOne timerCount={1000} data={scanStatus} />
       <SectionTwo data={{ detectImage, scanStatus }} />
       <SectionThree data={orders ? orders : []} />
-      <SectionFour data={backOrders ? backOrders : []} />
+      <SectionFour data={fullScan ? fullScan : []} />
     </StyledGridContainer>
   );
 };

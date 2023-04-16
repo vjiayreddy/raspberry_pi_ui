@@ -22,7 +22,7 @@ const StyledBoxContent = styled(Box)(({ theme }) => ({
   flexGrow: 1,
   display: "flex",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
+  backgroundSize: "contain",
   backgroundPosition: "top center",
 }));
 
@@ -51,13 +51,15 @@ const SectionOne = ({ data }) => {
             </Box>
           </>
         </StyledBoxHeader>
+        {
         <StyledBoxContent
           sx={{
             backgroundImage: data?.detectImage?.image
-              ? `url(${data?.detectImage?.image})`
+              ? `url(data:image/jpeg;base64,${data?.detectImage?.image.split("'")[1]})`
               : `url(https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg)`,
           }}
         ></StyledBoxContent>
+        }
       </StyledBoxMain>
     </Grid>
   );

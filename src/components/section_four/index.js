@@ -58,7 +58,7 @@ const SectionThree = ({ data }) => {
                     <td>{item.model}</td>
                     <td>{item.qty}</td>
                     <td>
-                      {item.datetime} - {item.date}
+                      {item.datetime}
                     </td>
                   </tr>
                 ))}
